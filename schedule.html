@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <style>
+    
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./css/morphext.css">
+  <link rel="shortcut icon" href="./img/brand-light.svg" type="image/png">
+
+  <title>Wheel Design - Gráfico & Web</title>
+</head>
+
+<body>
+          <div class="the-row bg-danger text-white p-3 mt-3" id="the-row">
+            <div class="schedule">
+              <div class="number-cube bg-primary">
+                <span class="">
+                  2º
+                </span>
+              </div>
+              <h2>
+                Reunião de Briefing
+              </h2>
+            </div>
+
+            <div class="bg-primary text-white the-row p-1 pl-3">
+              <p>
+                O briefing é quando eu e você começaremos uma conversa via e-mail para eu entender completamente sua
+                idéia e o seus objetivos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/morphext.js"></script>
+  <script src="./js/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    $(".rotate").Morphext(
+      defaults = {
+        animation: "animate__flipInX",
+        separator: ",",
+        speed: 2000,
+      }
+    );
+    $('#bt')
+      .mouseover(function () {
+
+        $('#bt').addClass('animate__animated animate__fadeIn');
+      })
+      .mouseout(function () {
+        $('#bt').removeClass('animate__animated animate__fadeIn');
+      });
+
+  </script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 1800,
+      speedAsDuration: true,
+      offset: 100
+
+    });
+    
+
+  </script>
+  <script src="../html-img.js"></script>
+</body>
+
+</html>
