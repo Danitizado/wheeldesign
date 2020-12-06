@@ -44,7 +44,7 @@ $grays: map-merge(("100": $gray-100,
 
 $blue: #000066 !default;
 $indigo: #6610f2 !default;
-$darkpurple: #2400BD !default;
+$darkpurple: #4000bd !default;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
 $red: #ff0000 !default;
@@ -97,9 +97,24 @@ $navbar-dark-active-color: $danger;
 @import '../css/animate.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;700;900&display=swap');
 
 * {
-  font-family: Raleway, Arial, Helvetica, sans-serif;
+  font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+  transition: all .2s ease-in-out;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+p {
+  font-weight: 200;
+  margin: 0;
+  font-size:  calc(80% + 20px);
+}
+
+section {
+  color: $white
 }
 
 button a {
@@ -116,12 +131,12 @@ button a:hover {
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus {
-  color: rgba(255, 0, 0, 0.75);
+  color: #ff0027bf;
 }
 
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-dark .navbar-nav .active>.nav-link {
-  color: rgb(255, 0, 0);
+  color: #ff0027;
   font-weight: bolder;
 }
 
@@ -137,10 +152,11 @@ button a:hover {
   font-weight: bolder;
   height: fit-content;
   margin-top: 100px;
-  background-size: cover;
-  background-image: url(../img/solar-cells.jpg);
+  background-color: #20005e;
+  background-size: 50%;
+  background-image: url(../img/background.svg);
+  background-attachment: fixed;
   background-position: center;
-  background-blend-mode: overlay;
   align-items: center;
   text-align: center;
   padding: 0 0 25px 0px;
@@ -151,7 +167,7 @@ button a:hover {
 }
 
 .hero-text {
-  font-size: 8vw;
+  font-size: 8vw !important;
   font-weight: bolder;
 }
 
@@ -159,6 +175,8 @@ button a:hover {
   padding: 0px 30px 0px 30px;
   border-radius: 50px;
   text-align: center;
+  background-color: $primary;
+  color: $danger;
 }
 
 .btn-transparent {
@@ -172,12 +190,13 @@ button a:hover {
 
 .btn-transparent:hover {
   background-color: $white;
-  color: $gray-900
+  color: $gray-900;
+  mix-blend-mode: screen;
 }
 
 
 .icons-and-text {
-  background-color: #2400bd;
+  background-color: #ff0027;
   border: 0;
   color: #FFF;
   margin: auto;
@@ -188,4 +207,53 @@ button a:hover {
 .card {
   border: 0;
   background-color: #00000000;
+}
+
+.card>.card-img-top {
+  position: sticky;
+  transition: all 1s cubic-bezier(1, 0, 0, 0);
+}
+
+.card>.card-img-top:hover {
+  transform: scale(1.15);
+  filter: saturate(0) brightness(100);
+}
+
+#services {
+  background-color: $primary;
+}
+
+.the-row>h1 {
+  line-height: 1;
+  margin: 0;
+  font-weight: 900;
+  border-radius: 50px;
+}
+
+.the-row {
+  border-radius: 10px;
+}
+
+.number-cube {
+  width: 60px;
+  height: 60px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 5px 10px;
+  font-weight: 900;
+  border-radius: 10px;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.schedule>h2 {
+  font-size: 4vw !important;
+  font-weight: 200;
 }

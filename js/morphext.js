@@ -50,7 +50,7 @@
         },
         animate: function () {
             this.index = ++this.index % this.phrases.length;
-            this.element[0].innerHTML = "<span class=\"animate__animated " + this.settings.animation + " bg-primary  hero-ani" + "\">" + this.phrases[this.index] + "</span>";
+            this.element[0].innerHTML = "<span class=\"animate__animated " + this.settings.animation + " hero-text hero-ani" + "\">" + this.phrases[this.index] + "</span>";
 
             if ($.isFunction(this.settings.complete)) {
                 this.settings.complete.call(this);
